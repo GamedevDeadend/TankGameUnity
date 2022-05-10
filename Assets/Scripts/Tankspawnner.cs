@@ -1,11 +1,17 @@
 ﻿using UnityEngine;
 
-public class Tankspawnner : MonoBehaviour
+public class TankSpawnner : MonoBehaviour
 {
-    public GameObject Tank;
+    public TankView tankview;
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(Tank, transform.position, Quaternion.identity);
+        CreateTank();
+    }
+
+    public void CreateTank()
+    {
+        TankModel tankModel = new TankModel();
+        TankController tankController = new TankController(tankModel, tankview);
     }
 }
