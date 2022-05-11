@@ -3,17 +3,17 @@
 public class TankModel
 {
     private TankController tankController;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    
+    public float movementspeed;
+    public float rotationspeed;
+
+    public TankModel(float _movementspeed, float _rotationspeed)
     {
-        
+        movementspeed = _movementspeed;
+        rotationspeed = _rotationspeed;
     }
+    // Start is called before the first frame update
 
     public void SetController(TankController _tankController)
     {
